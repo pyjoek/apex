@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Expense extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['project_id', 'category', 'amount'];
+
+    public function project() {
+        return $this->belongsTo(Project::class);
+    }
 }
