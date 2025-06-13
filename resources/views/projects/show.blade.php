@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layout')
 
 @section('content')
 <h2>{{ $project->name }}</h2>

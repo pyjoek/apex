@@ -6,7 +6,7 @@
 </head>
 <body class="p-4">
     <div class="container">
-        <h1 class="mb-4">Project Management System</h1>
+        <h1 class="mb-4"><a href="/projects/create">Project Management System</a></h1>
         @yield('content')
     </div>
 </body>

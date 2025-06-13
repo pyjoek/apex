@@ -19,7 +19,7 @@ class ProjectController extends Controller
         return view('projects.show', compact('project')); // ✅ FIXED from 'projects'
     }
 
-    public function store(Request $request) // ✅ FIXED argument order and name
+    public function store(Request $request)
     {
         $project = Project::create($request->only('name'));
         return redirect()->route('projects.show', $project);
@@ -35,5 +35,10 @@ class ProjectController extends Controller
     {
         $project->expenses()->create($request->only('category', 'amount'));
         return back();
+    }
+
+    public function create()
+    {
+        return view('projects.create');
     }
 }
